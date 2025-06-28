@@ -1,0 +1,12 @@
+{
+    "name": "meu-primeiro-ts",
+    "version": "1.0.0",
+    "main": "src/app.ts",
+    "license": "MIT",
+    "devDependencies": {
+        "rimraf": "^6.0.1"
+    },
+    "scripts": {
+        "clean": "rimraf dist"
+    }
+}
