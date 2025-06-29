@@ -1,5 +1,5 @@
 // 1. Interface básica para um objeto pessoa
-interface Pessoa {
+export interface Pessoa {
     nome: string,
     idade: number,
     email?: string // ? indica que é opcional
@@ -32,7 +32,7 @@ exibirDadosPessoa(pessoa2);
 // Erro: Porperty 'idade' is missing in type
 
 // 2. Propriedades somente leitura (readonly)
-interface Produto {
+export interface Produto {
     readonly id: number, // Não pode ser alterado após a inicialização
     nome: string,
     preco: Number
@@ -48,7 +48,7 @@ let meuProduto: Produto = {
 meuProduto.nome = "Smartphone"; // OK
 
 // 3. Interfaces para funções (call signatures)
-interface FuncaoCalculadora {
+export interface FuncaoCalculadora {
     (x: number, y: number): number; // Define a assinatura da função
 };
 
@@ -62,22 +62,22 @@ console.log(adicionar(10, 5));
 console.log(subtrair(10, 5));
 
 // 4. Estendendo interfaces
-interface Animal {
+export interface Animal {
     nome: string,
     emitirSom(): void
 }
 
-interface Cachorro extends Animal {
-    raca: string,
+export interface Cão extends Animal {
+    raça: string,
     latir(): void
 }
 
-let meuCachorro: Cachorro = {
+let meuLabrador: Cão = {
     nome: "Rex",
-    raca: "Labrador",
+    raça: "Labrador",
     emitirSom: () => console.log("Au Au"),
     latir: () => console.log("Latindo...")
 }
 
-meuCachorro.emitirSom();
-meuCachorro.latir();
+meuLabrador.emitirSom();
+meuLabrador.latir();
