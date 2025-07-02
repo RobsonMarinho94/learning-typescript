@@ -1,4 +1,4 @@
-class Animal {
+export class Animal {
     nome: string;
 
     constructor(nome: string) {
@@ -10,7 +10,7 @@ class Animal {
     }
 }
 
-class Cachorro extends Animal {
+export class Cachorro extends Animal {
     raça: string;
 
     constructor(nome: string, raça: string) {
@@ -32,6 +32,6 @@ class Cachorro extends Animal {
 let meuAnimal = new Animal("Tartaruga");
 meuAnimal.mover(1); //Saída: Tartarug moveu 1m.
 
-let meuCachorro = new Cachorro("Buddy", "Golden Retriever");
-meuCachorro.latir(); // Saída: Buddy (Golden Retriever) está latindo! Au Au Au!
-meuCachorro.mover(20); // Saída: Buddy correu 20m. (Chamou o método sobrescrito)
+let meuGolden = new Cachorro("Buddy", "Golden Retriever");
+meuGolden.latir(); // Saída: Buddy (Golden Retriever) está latindo! Au Au Au!
+meuGolden.mover(20); // Saída: Buddy correu 20m. (Chamou o método sobrescrito)
